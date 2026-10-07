@@ -1,0 +1,9 @@
+# macOS junk
+.DS_Store
+
+# VS Code local settings
+.vscode/
+
+# Temporary files
+*.tmp
+*.log
