@@ -16,7 +16,7 @@ body {
 .display-frame {
   float: right;
   width: 79%;
-  height: 100vh;
+  height: 1000px;
   border: none;
 }
 
