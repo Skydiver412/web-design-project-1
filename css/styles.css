@@ -51,7 +51,9 @@ body {
   right: 0;
   width: 200px;
   height: 100vh;
+}
 
+.pattern-1 {
   background-color: #123b5d;
   background-image:
     repeating-linear-gradient(
