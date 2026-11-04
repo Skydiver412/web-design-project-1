@@ -1,0 +1,221 @@
+/* ========================================
+   CIRCULAR NAVIGATION
+   ======================================== */
+
+/* Section containing the circular navigation */
+.circle-demo {
+  text-align: center;
+  margin-top: 100px;
+}
+
+/* Main container for the circular menu */
+.circle-menu {
+  position: relative;
+
+  width: 500px;
+  height: 500px;
+
+  margin: 30px auto;
+}
+
+/* ========================================
+   OUTER CONNECTING RING
+   ======================================== */
+
+/*
+  The buttons are positioned 180px from
+  the center, so the ring diameter is:
+
+  180px × 2 = 360px
+*/
+.circle-menu::before {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 360px;
+  height: 360px;
+
+  transform: translate(-50%, -50%);
+
+  border: 3px solid #123b5d;
+  border-radius: 50%;
+
+  z-index: 1;
+}
+
+/* ========================================
+   CENTER BUTTON
+   ======================================== */
+
+.circle-center {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 120px;
+  height: 120px;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #123b5d;
+  color: white;
+
+  border: 4px solid lightskyblue;
+  border-radius: 50%;
+
+  font-weight: bold;
+
+  z-index: 2;
+}
+
+/* ========================================
+   OUTER BUTTONS
+   ======================================== */
+
+.circle-button {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 110px;
+  height: 110px;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: white;
+  color: #123b5d;
+
+  border: 3px solid #123b5d;
+  border-radius: 50%;
+
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+
+  z-index: 2;
+}
+
+/* ========================================
+   BUTTON POSITIONS
+   ======================================== */
+
+/*
+  Six buttons means:
+
+  360° / 6 = 60°
+
+  Each button is rotated around the center,
+  moved outward 180px, then rotated back
+  so its text remains upright.
+*/
+
+.button-1 {
+  transform: translate(-50%, -50%) rotate(0deg) translateY(-180px) rotate(0deg);
+}
+
+.button-2 {
+  transform: translate(-50%, -50%) rotate(60deg) translateY(-180px)
+    rotate(-60deg);
+}
+
+.button-3 {
+  transform: translate(-50%, -50%) rotate(120deg) translateY(-180px)
+    rotate(-120deg);
+}
+
+.button-4 {
+  transform: translate(-50%, -50%) rotate(180deg) translateY(-180px)
+    rotate(-180deg);
+}
+
+.button-5 {
+  transform: translate(-50%, -50%) rotate(240deg) translateY(-180px)
+    rotate(-240deg);
+}
+
+.button-6 {
+  transform: translate(-50%, -50%) rotate(300deg) translateY(-180px)
+    rotate(-300deg);
+}
+
+/* ========================================
+   SPOKES
+   ======================================== */
+
+/*
+  Each spoke starts at the center of the
+  menu and extends toward an outer button.
+
+  The center button and outer buttons sit
+  above the spokes because they have a
+  higher z-index.
+*/
+
+.spoke {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 3px;
+  height: 180px;
+
+  margin-top: -180px;
+
+  background-color: #123b5d;
+
+  transform-origin: bottom center;
+
+  z-index: 1;
+}
+
+/* ========================================
+   SPOKE POSITIONS
+   ======================================== */
+
+.spoke-1 {
+  transform: rotate(0deg);
+}
+
+.spoke-2 {
+  transform: rotate(60deg);
+}
+
+.spoke-3 {
+  transform: rotate(120deg);
+}
+
+.spoke-4 {
+  transform: rotate(180deg);
+}
+
+.spoke-5 {
+  transform: rotate(240deg);
+}
+
+.spoke-6 {
+  transform: rotate(300deg);
+}
+
+/* ========================================
+   BUTTON HOVER
+   ======================================== */
+
+.circle-button:hover {
+  background-color: #123b5d;
+  color: white;
+  border-color: lightskyblue;
+}

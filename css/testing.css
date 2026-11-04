@@ -1,0 +1,57 @@
+/* ========================================
+   TESTING PAGE
+   General layout for component experiments
+   ======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 30px;
+
+  background-color: #f4f6f8;
+  color: #333;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+/* ========================================
+   EXPERIMENT SECTIONS
+   ======================================== */
+
+section {
+  width: 100%;
+  min-height: 500px;
+
+  padding: 30px 20px;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+section h2 {
+  color: #174f78;
+
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+/* ========================================
+   SECTION DIVIDERS
+   ======================================== */
+
+hr {
+  width: 90%;
+
+  margin: 40px auto;
+
+  border: 0;
+  border-top: 1px solid #ccc;
+}

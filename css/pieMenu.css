@@ -1,0 +1,99 @@
+/* ========================================
+   PIE MENU
+   ======================================== */
+
+.pie-menu {
+  position: relative;
+
+  width: 400px;
+  height: 400px;
+
+  margin: 30px auto;
+}
+
+.pie-slice {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 400px;
+  height: 400px;
+
+  background-color: #123b5d;
+  color: white;
+
+  text-decoration: none;
+
+  clip-path: polygon(50% 50%, 21% 0%, 79% 0%);
+}
+
+.pie-slice:hover {
+  filter: brightness(1.2);
+}
+
+.pie-slice span {
+  position: absolute;
+
+  top: 10%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.slice-1 {
+  transform: rotate(0deg);
+  background-color: #123b5d;
+}
+
+.slice-2 {
+  transform: rotate(60deg);
+  background-color: #174f78;
+}
+
+.slice-3 {
+  transform: rotate(120deg);
+  background-color: #1b5a83;
+}
+
+.slice-4 {
+  transform: rotate(180deg);
+  background-color: #216995;
+}
+
+.slice-5 {
+  transform: rotate(240deg);
+  background-color: #2878a5;
+}
+
+.slice-6 {
+  transform: rotate(300deg);
+  background-color: #3288b5;
+}
+
+.slice-1 span {
+  transform: translateX(-50%) rotate(0deg);
+}
+
+.slice-2 span {
+  transform: translateX(-50%) rotate(-60deg);
+}
+
+.slice-3 span {
+  transform: translateX(-50%) rotate(-120deg);
+}
+
+.slice-4 span {
+  transform: translateX(-50%) rotate(-180deg);
+}
+
+.slice-5 span {
+  transform: translateX(-50%) rotate(-240deg);
+}
+
+.slice-6 span {
+  transform: translateX(-50%) rotate(-300deg);
+}

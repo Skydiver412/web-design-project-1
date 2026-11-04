@@ -1,0 +1,96 @@
+.bookshelf {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 30px;
+  min-height: 400px;
+}
+
+/* Basic book */
+
+.book {
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 350px;
+
+  background-color: #b7cc16;
+  border-radius: 3px;
+
+  box-shadow: 4px 4px 7px rgba(0, 0, 0, 0.35);
+  color: white;
+  text-decoration: none;
+
+  transition: transform 0.2s;
+}
+
+.book:hover {
+  color: white;
+  transform: translateY(-15px);
+}
+
+.book-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  white-space: nowrap;
+
+  transform: translate(-50%, -50%) rotate(90deg);
+
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Detailed book */
+
+.detailed-book {
+  width: 90px;
+
+  background: linear-gradient(
+    to right,
+    #08263d 0%,
+    #123b5d 12%,
+    #1b5a83 30%,
+    #2b78a8 45%,
+    #1b5a83 70%,
+    #123b5d 88%,
+    #08263d 100%
+  );
+
+  border-radius: 5px 8px 8px 5px;
+}
+
+.detailed-book .book-title {
+  top: 50%;
+  font-size: 18px;
+}
+
+.book-subtitle {
+  position: absolute;
+
+  top: 15px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 80px;
+
+  text-align: center;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.book-author {
+  position: absolute;
+  bottom: 18px;
+  left: 8px;
+  right: 8px;
+
+  text-align: center;
+  font-size: 8px;
+  line-height: 1.2;
+  color: white;
+}
